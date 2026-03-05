@@ -76,8 +76,7 @@ ON o.customer_id = c.customer_id;
 
 
 
-SELECT 
-    SUM(o.quantity * p.price) AS total_revenue
+SELECT SUM(o.quantity * p.price) AS total_revenue
 FROM orders o
 JOIN products p 
 ON o.product_id = p.product_id;
@@ -92,17 +91,15 @@ GROUP BY month
 ORDER BY month;
 
 
-SELECT 
-    customer_id,
-    COUNT(order_id) AS total_orders
+SELECT customer_id,
+COUNT(order_id) AS total_orders
 FROM orders
 GROUP BY customer_id
 HAVING COUNT(order_id) > 1;
 
 
-SELECT 
-    c.customer_name,
-    MAX(o.order_date) AS last_purchase_date
+SELECT c.customer_name,
+MAX(o.order_date) AS last_purchase_date
 FROM customers c
 LEFT JOIN orders o
 ON c.customer_id = o.customer_id
