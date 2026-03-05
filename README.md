@@ -1,4 +1,4 @@
-# Retail-sales-SQL-analysis-
+# Retail-sales-SQL-analysis
 Retail Sales and Customer Intelligence Analysis using SQL
 
 # Tools Used
